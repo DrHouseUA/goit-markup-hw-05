@@ -32,6 +32,7 @@
           <a
             class="link-logo logo-header"
             href="./index.html"
+            rel="noopener noreferrer"
             aria-label="link on logo to Main page"
             >Web<span class="logo-studio">Studio</span></a
           >
@@ -581,8 +582,108 @@
             </li>
           </ul>
         </div>
+
+        <div class="basement-subscribe-area">
+          <p class="basement-socials-caption">Subscribe</p>
+          <div class="subscribe-wrapper">
+            <label>
+              <input
+                class="basement-input"
+                type="email"
+                name="email"
+                placeholder="E-mail"
+              />
+            </label>
+            <button class="basement-btn" type="submit">
+              <span class="basement-btn-txt">Subscribe</span>
+              <svg class="basement-socials-icons" width="24" height="24">
+                <use href="./images/icons.svg#icon-airplane"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </footer>
+    <!-- #endregion -->
+
+    <!-- #region BackDrop  -->
+    <div class="backdrop-overlay">
+      <div class="backdrop">
+        <button class="backdrop-btn-close">
+          <svg class="backdrop-icon-close" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <p class="backdrop-caption">
+          Leave your contacts and we will call you back
+        </p>
+        <form class="backdrop-form" name="register-from">
+          <div class="backdrop-input-wrapper">
+            <label class="backdrop-labels" for="user-name"> Name </label>
+            <div class="backdrop-form-field">
+              <input
+                class="backdrop-form-input"
+                type="text"
+                name="user-name"
+                id="user-name"
+              />
+              <svg class="backdrop-field-icon" width="12" height="12">
+                <use href="./images/icons.svg#icon-human"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="backdrop-input-wrapper">
+            <label class="backdrop-labels" for="user-phone"> Phone </label>
+            <div class="backdrop-form-field">
+              <input
+                class="backdrop-form-input"
+                type="text"
+                name="user-phone"
+                id="user-phone"
+              />
+              <svg class="backdrop-field-icon" width="13" height="13">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="backdrop-input-wrapper">
+            <label class="backdrop-labels" for="user-email"> Email </label>
+            <div class="backdrop-form-field">
+              <input
+                class="backdrop-form-input"
+                type="text"
+                name="user-email"
+                id="user-email"
+              />
+              <svg class="backdrop-field-icon" width="15" height="12">
+                <use href="./images/icons.svg#icon-letter"></use>
+              </svg>
+            </div>
+          </div>
+
+          <label class="backdrop-labels" for="user-comment">Comment</label>
+          <div class="backdrop-input-wrapper">
+            <textarea
+              class="backdrop-text-area"
+              name="user-comment"
+              id="user-comment"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+
+          <div class="backdrop-privacy-wrapper">
+            <input class="backdrop-privacy-checkbox" type="checkbox" />
+            <p class="backdrop-privacy-txt">
+              I accept the terms and conditions of the
+              <a class="backdrop-privacy-ref" href="">Privacy Policy</a>
+            </p>
+          </div>
+          <button class="backdrop-btn-send" type="submit">
+            <span class="backdrop-btn-caption">Send</span>
+          </button>
+        </form>
+      </div>
+    </div>
     <!-- #endregion -->
   </body>
 </html>
