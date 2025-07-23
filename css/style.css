@@ -658,22 +658,28 @@ address {
   align-items: center;
   justify-content: center;
   background: rgba(46, 47, 66, 0.4);
-  pointer-events: none; 
+  /* pointer-events: none; 
   opacity: 0; */
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: block;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 4px;
   width: 408px;
-  height: 584px;
-  padding: 24px;
+  min-height: 584px;
+  padding: 72px 24px 24px 24px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background: #fcfcfc;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2,1);
 }
 
 .is-open {
@@ -682,21 +688,41 @@ address {
 }
 
 .backdrop-btn-close {
-  position: relative;
+  position: absolute;
+    top: 24px;
+    right: 24px;
     width: 24px;
     height: 24px;
     background-color: #e7e9fc;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 100%;
+    border-radius: 50%;
     display: block;
     margin: 0 0 24px auto;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop-btn-close:hover,
+.backdrop-btn-close:focus {
+  background-color: #404BBF;
+border: none;
 }
 
 .backdrop-icon-close {
   display: block;
   fill: #2E2F42;
   margin: 7px;  
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop-btn-close:hover,
+.backdrop-btn-close:focus .backdrop-icon-close{
+  fill:#ffffff;
+  stroke: #ffffff;
 }
 
 .backdrop-caption {
@@ -728,8 +754,9 @@ display: block;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   padding: 8px 32px;
-    
-  outline: none;
+  padding-left: 38px;
+  background-color: transparent;  
+  outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
@@ -739,14 +766,14 @@ display: block;
 }
 
 .backdrop-input-wrapper {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   
 }
 
 .backdrop-field-icon {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 16px;
   transform: translateY(-50%);
   fill: #2E2F42;
   margin-left: 16px;
@@ -766,7 +793,8 @@ display: block;
   line-height: 117%;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
-
+  background-color: transparent;
+  outline: transparent;
   padding: 8px 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
@@ -795,13 +823,24 @@ display: block;
   margin-right: 8px;
 }
 
-.backdrop-privacy-txt {
-  font-family: "Roboto", sans-serif;
+.backdrop-privacy-label {
     font-weight: 400;
     font-size: 12px;
     line-height: 117%;
     letter-spacing: 0.04em;
     color: #8e8f99;
+}
+
+.privacy-label-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46,47,66,0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop-privacy-ref {
@@ -811,6 +850,15 @@ display: block;
     color: #4d5ae5;
 }
 
+.user-privacy:checked ~ .privacy-label-icon{
+border: none;
+fill: #f4f4fd;
+background-color: #404BBF;
+}
+
+
+
+
 .backdrop-btn-send {
   display: block;
   width: 169px;
@@ -819,14 +867,18 @@ display: block;
   border-radius: 4px;
   padding: 16px 32px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  background: #4d5ae5;
+  background-color: #4d5ae5;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.04em;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
   cursor: pointer;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 /* #endregion */
+
