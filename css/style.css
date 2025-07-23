@@ -881,7 +881,7 @@ margin-bottom: 16px;
     color: #4d5ae5;
 }
 
-.backdrop-privacy-checkbox[type="checkbox"]:checked+ span{
+#user-privacy:checked+.backdrop-privacy-label .privacy-label-icon {
 border: none;
 fill: #f4f4fd;
 background-color: #404BBF;
