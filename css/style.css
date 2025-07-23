@@ -630,6 +630,7 @@ address {
     letter-spacing: 0.04em;
     text-align: center;
     color: #fff;
+    cursor: pointer;
 }
 
 .basement-btn {
