@@ -736,6 +736,7 @@ address {
 .backdrop-btn-close:focus {
   background-color: #404BBF;
 border: none;
+
 }
 
 .backdrop-icon-close {
@@ -747,7 +748,6 @@ border: none;
 
 .backdrop-btn-close:hover .backdrop-icon-close{
   fill:#ffffff;
-  stroke: #ffffff;
 }
 
 .backdrop-caption {
