@@ -613,6 +613,8 @@ address {
 .subscribe-wrapper {
   display: flex;
   gap: 24px;
+  justify-content: center;
+  align-items: center;
 }
 
 .subscribe-icon {
@@ -638,21 +640,6 @@ address {
   color: #ffffff;
 }
 
-  
-
-.basement-input-label {
-
-}
-
-.basement-btn-txt {
-    font-weight: 500;
-    line-height: 150%;
-    letter-spacing: 0.04em;
-    text-align: center;
-    color: #fff;
-    cursor: pointer;
-}
-
 .basement-btn {
   display: flex;
   justify-content: center;
@@ -670,6 +657,19 @@ address {
   cursor: pointer;
 }
 
+.basement-btn:hover,
+.basement-btn:focus {
+  background: #404bbf;
+}
+
+.basement-btn-txt {
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
 /* #endregion */
 
 /* #region BackDrop */
@@ -685,8 +685,8 @@ address {
   align-items: center;
   justify-content: center;
   background: rgba(46, 47, 66, 0.4);
-  /* pointer-events: none; 
-  opacity: 0; */
+  pointer-events: none; 
+  opacity: 0;
 
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -724,7 +724,6 @@ address {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     display: block;
-    margin: 0 0 24px auto;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -746,8 +745,7 @@ border: none;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop-btn-close:hover,
-.backdrop-btn-close:focus .backdrop-icon-close{
+.backdrop-btn-close:hover .backdrop-icon-close{
   fill:#ffffff;
   stroke: #ffffff;
 }
@@ -801,9 +799,11 @@ display: block;
   position: absolute;
   top: 50%;
   left: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transform: translateY(-50%);
   fill: #2E2F42;
-
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -867,6 +867,7 @@ margin-bottom: 16px;
   fill: transparent;
   width: 16px;
   height: 16px;
+  margin-right: 8px;
   border: 1px solid rgba(46,47,66,0.4);
   border-radius: 2px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -906,6 +907,11 @@ background-color: #404BBF;
   cursor: pointer;
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop-btn-send:hover,
+.backdrop-btn-send:focus {
+  background: #404bbf;
 }
 
 /* #endregion */
