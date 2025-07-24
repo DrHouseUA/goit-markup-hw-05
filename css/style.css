@@ -115,6 +115,16 @@ body {
 .contacts-link:hover,
 .contacts-link:focus {
   color: #404bbf;
+  
+}
+
+.logo-header:hover{
+ transform: scale(1.2);
+ transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-logo:hover span {
+  color: #404bbf;
 }
 
 .header-menu {
@@ -524,6 +534,7 @@ address {
 .basement .container{
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
 }
 
 .basement-logo {
@@ -541,11 +552,28 @@ address {
   line-height: 1.17;
   letter-spacing: 0.03em;
   margin-bottom: 16px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.basement-link:hover {
+  color: #404bbf;
+  transform: scale(1.2);
+  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.basement-link:hover span {
+ color: #404bbf;
+}
+
 
 .basement .logo-studio {
   display: inline-block;
   color: #f4f4fd;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo-studio:hover {
+  color:#404BBF;
 }
 
 .basement-logo-text {
@@ -555,9 +583,7 @@ address {
   letter-spacing: 0.02em;
 }
 
-.basement-link:hover {
-  color: #404bbf;
-}
+
 
 .footer a {
   display: inline-block;
@@ -608,6 +634,7 @@ address {
 
 .basement-subscribe-area {
   width: 453px;
+ 
 }
 
 .subscribe-wrapper {
